@@ -1,0 +1,164 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #222;
+  background: url('pexels-fwstudio-33348-164005.jpg') no-repeat center center fixed;
+  background-size: cover;
+  animation: zoomBackground 20s infinite alternate ease-in-out;
+}
+
+@keyframes zoomBackground {
+  0% { background-size: 100%; }
+  100% { background-size: 105%; }
+}
+
+/* Scroll Progress */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: #00c9ff;
+  width: 0;
+  z-index: 999;
+}
+
+/* Navbar */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+
+#navbar.scrolled {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 8px #573a0a;
+  animation: typeEffect 3s steps(18, end) forwards;
+  overflow: hidden;
+  white-space: nowrap;
+  width: fit-content;
+  display: inline-block;
+  border-right: none;
+}
+
+.nav-items {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffcc00;
+  text-shadow: 0 0 6px rgb(66, 26, 9);
+}
+
+.nav-link.active {
+  color: yellow;
+  font-weight: 700;
+  border-bottom: 2px solid rgb(255, 251, 0);
+}
+
+/* Sections */
+.section {
+  padding: 8rem 2rem 5rem;
+  margin: 8rem auto 4rem;
+  width: 90%;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px);
+  transition: all 0.5s ease;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+  color: #ffffff;
+  text-shadow: 0 0 8px #6f410c, 0 0 12px #483c0d;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: none;
+  display: inline-block;
+  width: fit-content;
+  animation: typeEffect 2s steps(25, end) forwards;
+}
+
+@keyframes typeEffect {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Remove unwanted line under h1 */
+h1::after {
+  content: none;
+}
+
+/* Paragraphs and Lists */
+p, ul {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  color: #000;
+}
+
+ul li {
+  margin-left: 1.5rem;
+}
+
+/* Title Animation Visibility Trigger */
+.animate-title {
+  opacity: 0;
+}
+
+.animate-title.visible {
+  opacity: 1;
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
