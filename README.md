@@ -1,10 +1,10 @@
-# 🌐 Interactive Navigation Bar
+#  Interactive Navigation Bar
 
 A stylish and interactive navigation bar created using **HTML**, **CSS**, and **JavaScript**. This project features smooth scroll transitions, hover effects, animated background gradients, and responsive design.
 
 ---
 
-## 🎯 Features
+##  Features
 
 - Fixed navigation bar
 - Animated background gradients
@@ -15,7 +15,7 @@ A stylish and interactive navigation bar created using **HTML**, **CSS**, and **
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 .
 ├── first.html # Main HTML file
@@ -25,7 +25,7 @@ A stylish and interactive navigation bar created using **HTML**, **CSS**, and **
 
 ---
 
-## 🛠️ Tech Used
+##  Tech Used
 
 - HTML5  
 - CSS3 (Gradients, Transitions)  
@@ -33,7 +33,7 @@ A stylish and interactive navigation bar created using **HTML**, **CSS**, and **
 
 ---
 
-## 📸 Preview
+##  Preview
 
 _(Add screenshot here after running locally or hosting)_
 
